@@ -12,15 +12,11 @@ let imageDatas = require('../data/imageDatas.json');
 imageDatas = (function genImageURL(imageDatasArr) {
   for (var i = 0, j = imageDatasArr.length; i < j; i++) {
     var singleImageData = imageDatasArr[i];
-
     singleImageData.imageURL = require('../images' + singleImageData.filename)
-
     imageDatasArr[i] = singleImageData;
   }
-
   return imageDatasArr;
 })(imageDatas);
-
 
 class AppComponent extends React.Component {
   render() {
@@ -29,7 +25,7 @@ class AppComponent extends React.Component {
         <section className="img-sec">
         </section>
         <nav className="controller-nav"></nav>
-      </section>
+        </section>
     );
   }
 }
